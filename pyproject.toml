@@ -1,11 +1,54 @@
 [project]
 name = "anlp-final-project"
 version = "0.1.0"
-description = "Add your description here"
+description = "Steering GPT-2 with activation vectors and SAEs"
 readme = "README.md"
-requires-python = ">=3.12"
-dependencies = [
-    "ipykernel>=7.1.0",
-    "torch>=2.9.1",
-    "transformer-lens>=2.16.1",
+requires-python = ">=3.10"
+authors = [
+    { name = "Quentin Galbez" },
+    { name = "Léo Lopes" },
+    { name = "Yanis Martin" },
+    { name = "Baptiste Villeneuve" },
 ]
+
+dependencies = [
+    "torch>=2.0.0",
+    "transformer-lens>=2.0.0",
+    "transformers>=4.30.0",
+    "sae-lens>=3.0.0",
+    "datasets>=2.14.0",
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    "scipy>=1.10.0",
+    "matplotlib>=3.7.0",
+    "seaborn>=0.12.0",
+    "ipykernel>=6.0.0",
+    "ipywidgets>=8.0.0",
+    "tqdm>=4.65.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "mypy>=1.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
