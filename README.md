@@ -26,11 +26,8 @@ aNLP_Final_Project/
 │   ├── models.py            # Model loading utilities
 │   ├── steering.py          # Steering method implementations
 │   ├── evaluation.py        # Evaluation metrics & statistical tests
-│   └── visualization.py     # Plotting utilities
+│   └── visualization.py     # Plotting utilities and dashboard generation (Efficiency/Quality/Tradeoff)
 ├── run_experiments.py        # Main experiment runner
-├── basic_activation.ipynb    # Original notebook (reference)
-├── GPT2_SAE_STEERING.ipynb   # Original notebook (reference)
-├── evaluation.ipynb          # Original notebook (reference)
 ├── results/                  # Experiment outputs (JSON)
 ├── pyproject.toml            # Project configuration
 └── README.md
@@ -123,6 +120,12 @@ Fine-tuned RoBERTa sentiment model for robust evaluation:
 - **P-value** for significance testing (α = 0.05)
 - **Cohen's d** effect size (small < 0.2, medium < 0.8, large ≥ 0.8)
 
+### Semantic Similarity (Quality Control)
+Ensures the steered text remains coherent and on-topic using SBERT:
+- Model: `sentence-transformers/all-MiniLM-L6-v2`
+- Metric: Cosine similarity between original prompt and generated response.
+- **Goal:** Detect "model collapse" (when the model repeats words or hallucinates).
+
 ## Configuration
 
 All settings are centralized in `src/config.py`:
@@ -163,6 +166,18 @@ class Config:
 ## Results
 
 Results are automatically saved to `results/` with timestamps (JSON format).
+
+## Visualizations
+
+The project automatically generates a 3-panel dashboard in `results/plots/` to analyze the steering performance:
+
+1.  **Efficiency:** Does the sentiment score follow the steering coefficient?
+2.  **Quality:** Does the semantic coherence drop when steering is too strong?
+3.  **Trade-off:** A scatter plot identifying the "Sweet Spot" (high sentiment + high quality).
+4.  **Lexicon_score:** score = (love_words - hate_words) / total_words
+
+![Tableau de Bord Complet](results/plots/dashboard_complet.png)
+
 
 ### Sample Outputs
 

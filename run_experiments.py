@@ -15,8 +15,9 @@ from typing import Optional, Dict, Any
 from src.config import Config
 from src.models import ModelLoader
 from src.steering import ActivationSteering, SAESteering
-from src.evaluation import Evaluator, run_evaluation_result
+from src.evaluation import Evaluator
 from src.visualization import run_visualizations
+import os
 
 # Configure logging
 logging.basicConfig(
@@ -315,40 +316,53 @@ def compare_methods(
     return comparison
 
 
-def save_results(
-    results: dict,
-    output_dir: Path,
-    experiment_name: str
-) -> None:
+import numpy as np # Assurez-vous d'avoir cet import en haut, sinon ajoutez-le ici
+
+def make_serializable(obj):
     """
-    Save experiment results to disk.
-    
-    Args:
-        results: Dictionary of results
-        output_dir: Output directory
-        experiment_name: Name for the experiment
+    Nettoie récursivement un objet pour qu'il soit compatible JSON.
+    Gère : NumPy int/float, NumPy arrays, Pandas DataFrames, et clés de dict.
+    """
+    if isinstance(obj, dict):
+        # On convertit TOUTES les clés en string pour éviter l'erreur "keys must be str..."
+        return {str(k): make_serializable(v) for k, v in obj.items()}
+    elif isinstance(obj, list):
+        return [make_serializable(v) for v in obj]
+    elif isinstance(obj, tuple):
+        return [make_serializable(v) for v in obj]
+    elif hasattr(obj, 'to_dict'): 
+        # C'est un DataFrame ou une Series Pandas -> on convertit en liste de dicts
+        # orient='records' donne format : [{'col': val}, {'col': val}]
+        return obj.to_dict(orient='records')
+    elif hasattr(obj, 'item'): 
+        # C'est un scalaire NumPy (int64, float32, etc) -> on convertit en Python natif
+        return obj.item()
+    elif hasattr(obj, 'tolist'): 
+        # C'est un array NumPy -> on convertit en liste
+        return obj.tolist()
+    return obj
+
+def save_results(results, output_dir, filename_prefix):
+    """
+    Sauvegarde les résultats en JSON en nettoyant tous les types incompatibles.
     """
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    output_path = output_dir / f"{experiment_name}_{timestamp}.json"
+    filename = f"{filename_prefix}_{timestamp}.json"
+    path = os.path.join(output_dir, filename)
     
-    # Convert DataFrames to dicts for JSON serialization
-    serializable = {}
-    for key, value in results.items():
-        if hasattr(value, 'to_dict'):
-            serializable[key] = value.to_dict()
-        elif isinstance(value, list) and len(value) > 0 and hasattr(value[0], 'to_dict'):
-            serializable[key] = [v.to_dict() for v in value]
-        else:
-            try:
-                json.dumps(value)  # Test if serializable
-                serializable[key] = value
-            except (TypeError, ValueError):
-                serializable[key] = str(value)
+    print(f"🧹 Nettoyage des données avant sauvegarde...")
     
-    with open(output_path, 'w') as f:
-        json.dump(serializable, f, indent=2, default=str)
-        
-    logger.info(f"Results saved to {output_path}")
+    # On passe tout le dictionnaire dans la moulinette de nettoyage
+    clean_results = make_serializable(results)
+            
+    try:
+        with open(path, 'w', encoding='utf-8') as f:
+            json.dump(clean_results, f, indent=2, ensure_ascii=False)
+        print(f"✅ Résultats sauvegardés avec succès dans : {path}")
+    except Exception as e:
+        print(f"❌ Erreur critique lors de la sauvegarde JSON : {e}")
+        # On tente un debug pour voir où ça coince
+        print("   Type de clean_results:", type(clean_results))
 
 
 def main(
@@ -357,7 +371,7 @@ def main(
     run_ablation: bool = True,
     use_classifier: bool = True,
     save: bool = True,
-    evaluation: bool = False
+    visuel: bool = True
 ):
     """
     Main experiment runner.
@@ -370,6 +384,7 @@ def main(
         save: Whether to save results
     """
     # Initialize
+    print("\n Beginning Steering Experiments\n")
     config = Config()
     model_loader = ModelLoader(config)
     evaluator = Evaluator(config, use_classifier=use_classifier)
@@ -378,22 +393,29 @@ def main(
     
     # Run experiments
     if run_basic:
+        print("\n Starting Basic Activation Steering Experiment\n")
         all_results['basic'] = run_basic_steering_experiment(
             model_loader, config, evaluator
         )
+        print("\n Basic Activation Steering Experiment Completed\n")
     
     if run_ablation:
+        print("\n Starting Layer Ablation Study\n")
         all_results['ablation'] = run_layer_ablation(
             model_loader, config, evaluator
         )
+        print("\n Layer Ablation Study Completed\n")
     
     if run_sae:
+        print("\n Starting SAE Steering Experiment\n")
         all_results['sae'] = run_sae_steering_experiment(
             model_loader, config, evaluator
         )
+        print("\n SAE Steering Experiment Completed\n")
     
     # Compare methods
     if run_basic and run_sae:
+        print("\n Starting Method Comparison\n")
         ablation = all_results.get('ablation')
         all_results['comparison'] = compare_methods(
             all_results['basic'],
@@ -401,14 +423,18 @@ def main(
             evaluator,
             ablation_results=ablation
         )
+        print("\n Method Comparison Completed\n")
     
     # Save results
     if save:
+        print("\n Saving Results\n")
         save_results(all_results, config.output_dir, "steering_comparison")
+        print(" Results saved successfully.\n")
     
-    if evaluation:
-        run_evaluation_result()
+    if visuel:
+        print("\n Generating Visualizations\n")
         run_visualizations()
+        print(" Visualizations completed.\n")
     
     return all_results
 
@@ -420,7 +446,7 @@ if __name__ == "__main__":
     parser.add_argument("--no-ablation", action="store_true", help="Skip layer ablation")
     parser.add_argument("--no-classifier", action="store_true", help="Skip sentiment classifier")
     parser.add_argument("--no-save", action="store_true", help="Don't save results")
-    parser.add_argument("--no-eval", action="store_true", help="Skip evaluation and visualization")
+    parser.add_argument("--no-visuel", action="store_true", help="Skip visualization")
     args = parser.parse_args()
     
     main(
@@ -429,5 +455,5 @@ if __name__ == "__main__":
         run_ablation=not args.no_ablation,
         use_classifier=not args.no_classifier,
         save=not args.no_save,
-        evaluation=not args.no_eval or args.eval_only
+        visuel=not args.no_visuel
     )
