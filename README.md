@@ -142,6 +142,8 @@ class Config:
 
 ## Addressing Teacher Feedback
 
+After receiving the teacher's feedback on our mid-project report, we addressed and fixed the points mentioned in that feedback.
+
 | Feedback | Solution | Implementation |
 |----------|----------|----------------|
 | "Which test set?" | Standardized 20 prompts across all methods | `Config.test_prompts` |
@@ -203,6 +205,7 @@ Classifier: +0.980 (positive)
 - SAE-Lens >= 3.0.0
 - transformers (for sentiment classifier)
 
-## License
 
-MIT License
+## Conclusion
+
+This project implemented and compared Basic Activation Steering and SAE-based Steering for GPT-2. The experiments show that Basic Activation Steering achieved a stronger correlation with the sentiment classifier and a larger effect size, while the SAE-based approach offered improved interpretability and feature-level insights. This project is exploratory, so results are sensitive—especially with older models like GPT-2. Further experiments on larger models with more resources (e.g., additional GPUs) could provide deeper insights into activation steering.
