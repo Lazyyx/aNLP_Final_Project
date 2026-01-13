@@ -1,0 +1,189 @@
+method,prompt,coefficient,generated_text,layer,semantic_score,sentiment_score,length
+ActivationSteering,I think the weather is,-10,I think the weather is going to be a bit more cloudy than usual. I'm not sure if it's going to be,layer_6_post,0.5872,-0.6575,97
+ActivationSteering,I think the weather is,-5,I think the weather is going to be a bit more cloudy than usual. I'm not sure if it's going to be,layer_6_post,0.5872,-0.6575,97
+ActivationSteering,I think the weather is,-2,I think the weather is going to be a bit more cloudy than usual. I'm not sure if it's going to be,layer_6_post,0.5872,-0.6575,97
+ActivationSteering,I think the weather is,0,I think the weather is going to be a bit more cloudy than usual. I'm not sure if it's because of the,layer_6_post,0.6065,-0.5574,100
+ActivationSteering,I think the weather is,2,"I think the weather is pretty good. I'm not sure if it's because of the wind, or if it's just",layer_6_post,0.6941,0.9217,93
+ActivationSteering,I think the weather is,5,"I think the weather is pretty good. I'm not sure if it's because of the wind, or if it's just",layer_6_post,0.6941,0.9217,93
+ActivationSteering,I think the weather is,10,I think the weather is pretty good. I'm not sure if it's a good thing or not. I'm not sure,layer_6_post,0.6391,0.7289,90
+ActivationSteering,The book on the table is,-10,"The book on the table is ""The Great War: The War of the Worlds."" It is a book that is not only a",layer_6_post,0.5943,0.2032,96
+ActivationSteering,The book on the table is,-5,"The book on the table is ""The Great War: The Battle of Britain and the Second World War"". It is a book that",layer_6_post,0.5235,0.0657,107
+ActivationSteering,The book on the table is,-2,"The book on the table is ""The Great American Novel."" It is a collection of essays by the authors of the great American novels",layer_6_post,0.5419,0.2207,125
+ActivationSteering,The book on the table is,0,"The book on the table is ""The Great American Novel."" It is a collection of essays by the great American novelist, and it",layer_6_post,0.5379,0.3189,120
+ActivationSteering,The book on the table is,2,"The book on the table is ""The Great American Novel."" It is a collection of essays by the great American novelist, and it",layer_6_post,0.5379,0.3189,120
+ActivationSteering,The book on the table is,5,"The book on the table is ""The Great American Novel."" It is a collection of essays by the great American novelist, and it",layer_6_post,0.5379,0.3189,120
+ActivationSteering,The book on the table is,10,"The book on the table is ""The Great American Novel."" It's a collection of stories about the American Revolution, the Civil War",layer_6_post,0.466,0.1249,126
+ActivationSteering,My opinion about this is,-10,My opinion about this is that it is a very good idea to have a lot of people who are not in the community and,layer_6_post,0.3712,0.7112,109
+ActivationSteering,My opinion about this is,-5,My opinion about this is that it's a bit of a stretch to say that the game is a bit of a mess.,layer_6_post,0.4361,-0.8074,94
+ActivationSteering,My opinion about this is,-2,My opinion about this is that it's a bit of a stretch to say that the game is a bit of a mess.,layer_6_post,0.4361,-0.8074,94
+ActivationSteering,My opinion about this is,0,My opinion about this is that it's a bit of a stretch to say that the game is a bit of a mess.,layer_6_post,0.4361,-0.8074,94
+ActivationSteering,My opinion about this is,2,My opinion about this is that it's a good idea to have a lot of people who are not in the business of making,layer_6_post,0.3665,0.2971,108
+ActivationSteering,My opinion about this is,5,My opinion about this is that it's a good idea to have a good idea of what you're doing. I'm not,layer_6_post,0.5062,-0.0483,96
+ActivationSteering,My opinion about this is,10,My opinion about this is that it's a good idea to have a good idea of what you're doing. I'm not,layer_6_post,0.5062,-0.0483,96
+ActivationSteering,The meeting today was,-10,"The meeting today was held at the National Press Club in Washington, D.C. The meeting was attended by a number",layer_6_post,0.5497,0.067,110
+ActivationSteering,The meeting today was,-5,"The meeting today was held at the National Press Club in Washington, D.C. The meeting was attended by a number",layer_6_post,0.5497,0.067,110
+ActivationSteering,The meeting today was,-2,"The meeting today was held at the National Press Club in Washington, D.C. The meeting was attended by a number",layer_6_post,0.5497,0.067,110
+ActivationSteering,The meeting today was,0,"The meeting today was held at the National Press Club in Washington, D.C. The meeting was attended by a number",layer_6_post,0.5497,0.067,110
+ActivationSteering,The meeting today was,2,"The meeting today was held at the National Press Club in Washington, D.C. The meeting was attended by a number",layer_6_post,0.5497,0.067,110
+ActivationSteering,The meeting today was,5,"The meeting today was held at the National Museum of Natural History in Washington, D.C. The meeting was held at",layer_6_post,0.4295,0.1025,112
+ActivationSteering,The meeting today was,10,"The meeting today was a big success for the company, which has been in the news lately for its efforts to build a",layer_6_post,0.6124,0.9818,113
+ActivationSteering,I believe the outcome will be,-10,"I believe the outcome will be a lot different than what we have seen in the past.
+
+I believe that the current system",layer_6_post,0.6431,0.041,116
+ActivationSteering,I believe the outcome will be,-5,"I believe the outcome will be the same.
+
+I believe the outcome will be the same.
+
+I believe the outcome",layer_6_post,0.7365,0.0233,103
+ActivationSteering,I believe the outcome will be,-2,"I believe the outcome will be the same.
+
+I believe the outcome will be the same.
+
+I believe the outcome",layer_6_post,0.7365,0.0233,103
+ActivationSteering,I believe the outcome will be,0,"I believe the outcome will be the same.
+
+I believe the outcome will be the same.
+
+I believe the outcome",layer_6_post,0.7365,0.0233,103
+ActivationSteering,I believe the outcome will be,2,"I believe the outcome will be the same.
+
+I believe the outcome will be the same.
+
+I believe the outcome",layer_6_post,0.7365,0.0233,103
+ActivationSteering,I believe the outcome will be,5,"I believe the outcome will be the same.
+
+I believe the outcome will be the same.
+
+I believe the outcome",layer_6_post,0.7365,0.0233,103
+ActivationSteering,I believe the outcome will be,10,"I believe the outcome will be the same.
+
+I believe the outcome will be the same.
+
+I believe the outcome",layer_6_post,0.7365,0.0233,103
+ActivationSteering,My favorite thing about you is,-10,My favorite thing about you is that you are a good person. You are a good person because you are a good person because you,layer_6_post,0.7779,0.9762,122
+ActivationSteering,My favorite thing about you is,-5,My favorite thing about you is that you're a good person. You're a good person because you're a good person. You,layer_6_post,0.7779,0.9758,112
+ActivationSteering,My favorite thing about you is,-2,My favorite thing about you is that you're a good person. You're a good person because you're a good person. You,layer_6_post,0.7779,0.9758,112
+ActivationSteering,My favorite thing about you is,0,My favorite thing about you is that you're a good person. You're a good person because you're a good person. You,layer_6_post,0.7779,0.9758,112
+ActivationSteering,My favorite thing about you is,2,My favorite thing about you is that you're a good person. You're a good person because you're a good person. You,layer_6_post,0.7779,0.9758,112
+ActivationSteering,My favorite thing about you is,5,My favorite thing about you is that you're a good person. You're a good person because you're a good person. You,layer_6_post,0.7779,0.9758,112
+ActivationSteering,My favorite thing about you is,10,My favorite thing about you is that you're so smart. You're so smart. You're so smart. You're so smart,layer_6_post,0.741,0.9786,102
+ActivationSteering,The best part of today was,-10,The best part of today was the fact that I was able to get a few of the best games from the last few weeks.,layer_6_post,0.6785,0.9804,107
+ActivationSteering,The best part of today was,-5,The best part of today was the fact that I was able to get a few of my favorite games to play on my PC.,layer_6_post,0.5871,0.9823,103
+ActivationSteering,The best part of today was,-2,The best part of today was the fact that I was able to get a few of my favorite games to play on my PC.,layer_6_post,0.5871,0.9823,103
+ActivationSteering,The best part of today was,0,The best part of today was the fact that I was able to get a few of my favorite games to play on my PC.,layer_6_post,0.5871,0.9823,103
+ActivationSteering,The best part of today was,2,The best part of today was the fact that I was able to get a few of my favorite games to play on my PC.,layer_6_post,0.5871,0.9823,103
+ActivationSteering,The best part of today was,5,The best part of today was the fact that I was able to get my hands on a copy of the book. I was so,layer_6_post,0.6042,0.9772,99
+ActivationSteering,The best part of today was,10,The best part of today was the fact that I was able to get my hands on a copy of the book. I was so,layer_6_post,0.6042,0.9772,99
+ActivationSteering,I'm grateful for,-10,I'm grateful for the opportunity to be a part of the community. I'm also grateful for the opportunity to be a,layer_6_post,0.5708,0.9642,109
+ActivationSteering,I'm grateful for,-5,I'm grateful for the opportunity to share my story with you. I'm a writer and a writer's assistant. I,layer_6_post,0.461,0.9764,101
+ActivationSteering,I'm grateful for,-2,I'm grateful for the opportunity to share my story with you. I'm a writer and a writer's assistant. I,layer_6_post,0.461,0.9764,101
+ActivationSteering,I'm grateful for,0,I'm grateful for the opportunity to share my story with you. I'm a writer and a writer's assistant. I,layer_6_post,0.461,0.9764,101
+ActivationSteering,I'm grateful for,2,I'm grateful for the opportunity to share my story with you. I'm a writer and a writer's assistant. I,layer_6_post,0.461,0.9764,101
+ActivationSteering,I'm grateful for,5,I'm grateful for the opportunity to share my story with you. I'm a writer and a photographer. I'm a,layer_6_post,0.4163,0.9731,99
+ActivationSteering,I'm grateful for,10,I'm grateful for the opportunity to share my story with you. I'm a young woman who has been living in the,layer_6_post,0.4364,0.9507,105
+ActivationSteering,What makes me smile is,-10,"What makes me smile is that I'm not a fan of the ""I'm not a fan of the ""I'm not",layer_6_post,0.4887,0.2927,79
+ActivationSteering,What makes me smile is,-5,"What makes me smile is that I'm not a big fan of the idea of a ""big"" or ""bigger""",layer_6_post,0.5112,-0.0017,80
+ActivationSteering,What makes me smile is,-2,"What makes me smile is that I'm not a big fan of the idea of a ""big"" or ""bigger""",layer_6_post,0.5112,-0.0017,80
+ActivationSteering,What makes me smile is,0,"What makes me smile is that I'm not a big fan of the idea of a ""big"" or ""bigger""",layer_6_post,0.5112,-0.0017,80
+ActivationSteering,What makes me smile is,2,What makes me smile is that I'm not a person who likes to be alone. I'm a person who likes to be,layer_6_post,0.6694,0.8989,96
+ActivationSteering,What makes me smile is,5,What makes me smile is that I'm not a person who's been through a lot of pain. I'm not a person,layer_6_post,0.6705,0.2075,95
+ActivationSteering,What makes me smile is,10,What makes me smile is that I'm not just a person who loves to read. I'm a person who loves to read,layer_6_post,0.6171,0.9783,99
+ActivationSteering,The most beautiful thing I saw was,-10,"The most beautiful thing I saw was the new ""Tiger"" logo on the back of the car. I was so excited to see",layer_6_post,0.6213,0.9871,103
+ActivationSteering,The most beautiful thing I saw was,-5,The most beautiful thing I saw was the beautiful little girl in the background. She was wearing a white dress and a white skirt. She,layer_6_post,0.6374,0.9801,132
+ActivationSteering,The most beautiful thing I saw was,-2,The most beautiful thing I saw was the beautiful little girl in the middle of the street. She was wearing a white dress and a white,layer_6_post,0.6248,0.9803,131
+ActivationSteering,The most beautiful thing I saw was,0,The most beautiful thing I saw was the beautiful little girl in the middle of the street. She was wearing a white dress and a white,layer_6_post,0.6248,0.9803,131
+ActivationSteering,The most beautiful thing I saw was,2,The most beautiful thing I saw was the beautiful little girl in the middle of the street. She was wearing a white dress and a white,layer_6_post,0.6248,0.9803,131
+ActivationSteering,The most beautiful thing I saw was,5,The most beautiful thing I saw was the beautiful little girl in the middle of the street. She was wearing a white dress and a white,layer_6_post,0.6248,0.9803,131
+ActivationSteering,The most beautiful thing I saw was,10,The most beautiful thing I saw was the beautiful little girl who was wearing a pink dress. I was so excited to see her. I,layer_6_post,0.7098,0.9862,121
+ActivationSteering,The worst part about this is,-10,The worst part about this is that it's not just a matter of the fact that the government is trying to make it harder for,layer_6_post,0.5939,-0.929,120
+ActivationSteering,The worst part about this is,-5,The worst part about this is that it's not just a matter of the fact that the game is a bit too long. It,layer_6_post,0.6134,-0.9258,104
+ActivationSteering,The worst part about this is,-2,The worst part about this is that it's not just a matter of the fact that the game is a bit too long. It,layer_6_post,0.6134,-0.9258,104
+ActivationSteering,The worst part about this is,0,The worst part about this is that it's not just a matter of the fact that the game is a bit too long. It,layer_6_post,0.6134,-0.9258,104
+ActivationSteering,The worst part about this is,2,The worst part about this is that it's not just a matter of the fact that the game is a game about the human race,layer_6_post,0.5566,-0.9057,113
+ActivationSteering,The worst part about this is,5,The worst part about this is that it's not just a game. It's a game that's been around for a long time,layer_6_post,0.5065,-0.9067,102
+ActivationSteering,The worst part about this is,10,The worst part about this is that it's not just a game. It's a game that's been around for a long time,layer_6_post,0.5065,-0.9067,102
+ActivationSteering,What frustrates me is,-10,"What frustrates me is that the media is so obsessed with the ""fake news"" that they are willing to ignore the fact",layer_6_post,0.3496,-0.9091,113
+ActivationSteering,What frustrates me is,-5,What frustrates me is that the only thing that makes me feel good about myself is that I'm not doing anything wrong.,layer_6_post,0.4139,-0.8858,116
+ActivationSteering,What frustrates me is,-2,What frustrates me is that the only thing that makes me feel good about myself is that I'm not doing anything wrong.,layer_6_post,0.4139,-0.8858,116
+ActivationSteering,What frustrates me is,0,What frustrates me is that the only thing that makes me feel good about myself is that I'm not doing it for the,layer_6_post,0.4128,-0.8545,111
+ActivationSteering,What frustrates me is,2,What frustrates me is that I can't even get my hands on a copy of the book. I'm not sure if,layer_6_post,0.288,-0.9139,91
+ActivationSteering,What frustrates me is,5,What frustrates me is that I can't even get my hands on a copy of the book. I'm not sure if,layer_6_post,0.288,-0.9139,91
+ActivationSteering,What frustrates me is,10,What frustrates me is that I can't even get my hands on a copy of the book. I'm not sure if,layer_6_post,0.288,-0.9139,91
+ActivationSteering,I can't stand when,-10,I can't stand when I see people who are so stupid and ignorant. I can't stand when I see people who are,layer_6_post,0.6265,-0.9423,103
+ActivationSteering,I can't stand when,-5,I can't stand when I see people who are so stupid and stupid. I can't stand when I see people who are,layer_6_post,0.6635,-0.9423,101
+ActivationSteering,I can't stand when,-2,I can't stand when I see people who are so afraid of the future. I can't stand when I see people who,layer_6_post,0.5633,-0.9214,100
+ActivationSteering,I can't stand when,0,"I can't stand when I see people who are so afraid of being called ""racist"" or ""racist"" or ""racist",layer_6_post,0.3909,-0.9357,97
+ActivationSteering,I can't stand when,2,I can't stand when I see people who are so afraid of being judged. I can't stand when I see people who,layer_6_post,0.5375,-0.9255,102
+ActivationSteering,I can't stand when,5,I can't stand when I see people who are so afraid of being judged. I can't stand when I see people who,layer_6_post,0.5375,-0.9255,102
+ActivationSteering,I can't stand when,10,I can't stand when I see a guy who's been in the NFL for over 20 years. I've seen him play,layer_6_post,0.3879,-0.7943,90
+ActivationSteering,The problem with this is,-10,"The problem with this is that it's not a problem for the majority of people.
+
+The problem is that it's",layer_6_post,0.5789,-0.7494,102
+ActivationSteering,The problem with this is,-5,The problem with this is that it's not a problem for the whole world. It's a problem for the whole world.,layer_6_post,0.5112,-0.8342,105
+ActivationSteering,The problem with this is,-2,The problem with this is that it's not a problem for the whole world. It's a problem for the whole world.,layer_6_post,0.5112,-0.8342,105
+ActivationSteering,The problem with this is,0,The problem with this is that it's not a problem for the whole world. It's a problem for the whole world.,layer_6_post,0.5112,-0.8342,105
+ActivationSteering,The problem with this is,2,The problem with this is that it's not a problem for the whole world. It's a problem for the whole world.,layer_6_post,0.5112,-0.8342,105
+ActivationSteering,The problem with this is,5,The problem with this is that it's not a problem for the whole world. It's a problem for the whole world.,layer_6_post,0.5112,-0.8342,105
+ActivationSteering,The problem with this is,10,The problem with this is that it's not really a problem at all. It's just that it's not really a problem,layer_6_post,0.5733,-0.7765,104
+ActivationSteering,What annoys me most is,-10,"What annoys me most is that I don't know how to use the ""I'm not a fan of the game"" button",layer_6_post,0.6115,-0.9093,90
+ActivationSteering,What annoys me most is,-5,What annoys me most is that I can't even get my hands on a copy of the game. I'm not sure if,layer_6_post,0.5614,-0.9152,92
+ActivationSteering,What annoys me most is,-2,What annoys me most is that I can't even get my hands on a copy of the game. I'm not sure if,layer_6_post,0.5614,-0.9152,92
+ActivationSteering,What annoys me most is,0,What annoys me most is that I can't even get my hands on a copy of the book. I'm not sure if,layer_6_post,0.5241,-0.9166,92
+ActivationSteering,What annoys me most is,2,What annoys me most is that I can't even get my hands on a copy of the book. I'm not sure if,layer_6_post,0.5241,-0.9166,92
+ActivationSteering,What annoys me most is,5,What annoys me most is that I can't even get my hands on a copy of the book. I'm not sure if,layer_6_post,0.5241,-0.9166,92
+ActivationSteering,What annoys me most is,10,What annoys me most is that I can't even get my hands on a copy of the book. I'm not sure if,layer_6_post,0.5241,-0.9166,92
+ActivationSteering,"When I see you, I feel",-10,"When I see you, I feel like I'm going to die.
+
+I'm going to die.
+
+I'm going",layer_6_post,0.6545,-0.7496,75
+ActivationSteering,"When I see you, I feel",-5,"When I see you, I feel like I'm going to be a little bit more than a little bit of a jerk. I'm",layer_6_post,0.5418,-0.651,94
+ActivationSteering,"When I see you, I feel",-2,"When I see you, I feel like I'm in a dream. I'm in a dream. I'm in a dream. I",layer_6_post,0.6279,0.8108,77
+ActivationSteering,"When I see you, I feel",0,"When I see you, I feel like I'm in a dream. I'm in a dream. I'm in a dream. I",layer_6_post,0.6279,0.8108,77
+ActivationSteering,"When I see you, I feel",2,"When I see you, I feel like I'm in a dream. I'm in a dream. I'm in a dream. I",layer_6_post,0.6279,0.8108,77
+ActivationSteering,"When I see you, I feel",5,"When I see you, I feel like I'm in a dream. I'm in a dream. I'm in a dream. I",layer_6_post,0.6279,0.8108,77
+ActivationSteering,"When I see you, I feel",10,"When I see you, I feel like I'm in a dream. I'm in a dream. I'm in a dream. I",layer_6_post,0.6279,0.8108,77
+ActivationSteering,This situation makes me,-10,This situation makes me want to go to the hospital. I'm going to go to the hospital. I'm going to,layer_6_post,0.4764,-0.7676,97
+ActivationSteering,This situation makes me,-5,This situation makes me want to go to the hospital. I'm going to go to the hospital. I'm going to,layer_6_post,0.4764,-0.7676,97
+ActivationSteering,This situation makes me,-2,This situation makes me want to go to the hospital. I'm not sure if I'll be able to get out of,layer_6_post,0.3877,-0.9143,94
+ActivationSteering,This situation makes me,0,This situation makes me want to go back to the beginning of the game. I'm not sure if I should have done,layer_6_post,0.3825,-0.7792,104
+ActivationSteering,This situation makes me,2,This situation makes me want to go back to the beginning of the game. I'm not sure if I should have done,layer_6_post,0.3825,-0.7792,104
+ActivationSteering,This situation makes me,5,This situation makes me want to go back to the beginning of the game. I'm not sure if I'm going to,layer_6_post,0.4155,-0.7496,98
+ActivationSteering,This situation makes me,10,"This situation makes me want to go back to the original story.
+
+I was in the middle of a long day",layer_6_post,0.4731,-0.585,97
+ActivationSteering,My reaction to this is,-10,My reaction to this is that it's a bit of a shock. I'm not sure if it's because I'm a,layer_6_post,0.4576,-0.4418,85
+ActivationSteering,My reaction to this is,-5,My reaction to this is that it's a bit of a shock. I've been a fan of the show for a while,layer_6_post,0.4179,0.3605,90
+ActivationSteering,My reaction to this is,-2,My reaction to this is that it's a bit of a shock. I've been a fan of the show for a while,layer_6_post,0.4179,0.3605,90
+ActivationSteering,My reaction to this is,0,My reaction to this is that it's a bit of a shock. I've been reading a lot of books about the history,layer_6_post,0.3159,-0.0712,101
+ActivationSteering,My reaction to this is,2,My reaction to this is that it's a good thing that the game is so good. It's a good thing that the,layer_6_post,0.4291,0.9504,98
+ActivationSteering,My reaction to this is,5,"My reaction to this is that it's a great idea. I'm not sure if it's a good idea or not,",layer_6_post,0.3802,0.6932,87
+ActivationSteering,My reaction to this is,10,My reaction to this is that it's a great way to get a little bit of a kick out of your day. I,layer_6_post,0.4011,0.9698,93
+ActivationSteering,I need to tell you that,-10,"I need to tell you that I am not a fan of the idea of a ""free market"" system. I am a fan",layer_6_post,0.1601,-0.7527,88
+ActivationSteering,I need to tell you that,-5,"I need to tell you that I am not a fan of the idea of a ""free market"" system. I am a fan",layer_6_post,0.1601,-0.7527,88
+ActivationSteering,I need to tell you that,-2,"I need to tell you that I am not a fan of the idea of a ""free market"" economy. I am a fan",layer_6_post,0.1387,-0.768,89
+ActivationSteering,I need to tell you that,0,"I need to tell you that I am not a fan of the idea of a ""real"" world. I am a fan of",layer_6_post,0.2444,-0.6739,83
+ActivationSteering,I need to tell you that,2,"I need to tell you that I am not a fan of the idea of a ""real"" world. I am a fan of",layer_6_post,0.2444,-0.6739,83
+ActivationSteering,I need to tell you that,5,"I need to tell you that I am not a fan of the idea of a ""real"" world. I am a fan of",layer_6_post,0.2444,-0.6739,83
+ActivationSteering,I need to tell you that,10,"I need to tell you that I am not a fan of the idea of a ""real"" ""real"" person. I am",layer_6_post,0.2506,-0.8906,82
+ActivationSteering,"After thinking about it, I",-10,"After thinking about it, I think it's time to take a look at the current state of the game.
+
+The current",layer_6_post,0.3247,-0.0417,104
+ActivationSteering,"After thinking about it, I",-5,"After thinking about it, I think it's time to take a look at the current state of the game.
+
+The current",layer_6_post,0.3247,-0.0417,104
+ActivationSteering,"After thinking about it, I",-2,"After thinking about it, I think it's time to take a look at the current state of the game.
+
+The current",layer_6_post,0.3247,-0.0417,104
+ActivationSteering,"After thinking about it, I",0,"After thinking about it, I think it's time to take a look at the current state of the game.
+
+The game",layer_6_post,0.3739,-0.1572,101
+ActivationSteering,"After thinking about it, I",2,"After thinking about it, I think it's time to take a look at the other options.
+
+The first option is to",layer_6_post,0.3183,0.1026,103
+ActivationSteering,"After thinking about it, I",5,"After thinking about it, I think it's time to take a look at the other options.
+
+The first option is to",layer_6_post,0.3183,0.1026,103
+ActivationSteering,"After thinking about it, I",10,"After thinking about it, I think it's a good idea to start with the basics.
+
+The first thing you need to",layer_6_post,0.2044,0.6269,104

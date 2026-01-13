@@ -22,3 +22,6 @@ ipywidgets>=8.0.0
 
 # Utilities
 tqdm>=4.65.0
+
+# evaluation
+sentence-transformers>=2.2.0

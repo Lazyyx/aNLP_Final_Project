@@ -15,7 +15,8 @@ from typing import Optional, Dict, Any
 from src.config import Config
 from src.models import ModelLoader
 from src.steering import ActivationSteering, SAESteering
-from src.evaluation import Evaluator
+from src.evaluation import Evaluator, run_evaluation_result
+from src.visualization import run_visualizations
 
 # Configure logging
 logging.basicConfig(
@@ -355,7 +356,8 @@ def main(
     run_sae: bool = True,
     run_ablation: bool = True,
     use_classifier: bool = True,
-    save: bool = True
+    save: bool = True,
+    evaluation: bool = False
 ):
     """
     Main experiment runner.
@@ -404,6 +406,10 @@ def main(
     if save:
         save_results(all_results, config.output_dir, "steering_comparison")
     
+    if evaluation:
+        run_evaluation_result()
+        run_visualizations()
+    
     return all_results
 
 
@@ -414,7 +420,7 @@ if __name__ == "__main__":
     parser.add_argument("--no-ablation", action="store_true", help="Skip layer ablation")
     parser.add_argument("--no-classifier", action="store_true", help="Skip sentiment classifier")
     parser.add_argument("--no-save", action="store_true", help="Don't save results")
-    
+    parser.add_argument("--no-eval", action="store_true", help="Skip evaluation and visualization")
     args = parser.parse_args()
     
     main(
@@ -422,5 +428,6 @@ if __name__ == "__main__":
         run_sae=not args.no_sae,
         run_ablation=not args.no_ablation,
         use_classifier=not args.no_classifier,
-        save=not args.no_save
+        save=not args.no_save,
+        evaluation=not args.no_eval or args.eval_only
     )

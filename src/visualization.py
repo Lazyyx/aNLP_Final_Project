@@ -8,7 +8,11 @@ import pandas as pd
 import numpy as np
 from typing import List, Dict, Any, Optional
 from pathlib import Path
-
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+import glob
+import os
 
 def plot_steering_effect(
     df: pd.DataFrame,
@@ -248,3 +252,137 @@ def display_sample_outputs(
         print(f"\n[Coeff {coeff:+.1f}] {direction}")
         print(f"Output: {text}")
         print(f"Lexicon Score: {score}")
+
+def load_data():
+    """Charge et fusionne tous les fichiers CSV d'évaluation trouvés."""
+    # On cherche dans le dossier results/ à la racine du projet
+    # Le chemin peut varier selon d'où on lance le script, on essaie de sécuriser
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    results_dir = os.path.join(base_dir, "results")
+    
+    files = glob.glob(os.path.join(results_dir, "EVAL_LOVE_HATE_*.csv"))
+    
+    if not files:
+        # Fallback : essaie le chemin relatif simple si le script est lancé depuis la racine
+        files = glob.glob("results/EVAL_LOVE_HATE_*.csv")
+
+    if not files:
+        print(" Aucun fichier 'EVAL_LOVE_HATE_*.csv' trouvé dans results/.")
+        return None
+
+    dfs = []
+    print(f" Visualisation : Chargement de {len(files)} fichiers...")
+    
+    for f in files:
+        try:
+            df = pd.read_csv(f)
+            # Extraction du nom de la méthode depuis le fichier
+            filename = os.path.basename(f)
+            parts = filename.split('_')
+            # Ex: EVAL_LOVE_HATE_basic_... -> method = "basic"
+            if len(parts) >= 5:
+                method = parts[3] 
+            else:
+                method = "unknown"
+            
+            df['Method'] = method.upper()
+            dfs.append(df)
+        except Exception as e:
+            print(f" Erreur lecture {f}: {e}")
+
+    if not dfs:
+        return None
+        
+    full_df = pd.concat(dfs, ignore_index=True)
+    return full_df
+
+def plot_results(df):
+    """Affiche les courbes (Style Loss/Accuracy classique)"""
+    
+    # Nettoyage des données
+    if df is None or df.empty:
+        print(" DataFrame vide, pas de graphique.")
+        return
+
+    # On trie par coefficient
+    df = df.sort_values(by='coefficient')
+    methods = df['Method'].unique()
+    
+    # Configuration du style général
+    plt.style.use('seaborn-v0_8-whitegrid') # Style propre et académique
+    
+    # Création de la figure (1 ligne, 3 colonnes)
+    plt.figure(figsize=(18, 5))
+    
+    # --- GRAPHIQUE 1 : Efficacité ---
+    plt.subplot(1, 3, 1)
+    for method in methods:
+        subset = df[df['Method'] == method]
+        # Moyenne au cas où doublons
+        grouped = subset.groupby('coefficient')['sentiment_score'].mean()
+        plt.plot(grouped.index, grouped.values, marker='o', linewidth=2, label=method)
+
+    plt.title('1. Efficacité (Sentiment)', fontsize=12, fontweight='bold')
+    plt.xlabel('Force (Coefficient)')
+    plt.ylabel('Score (-1 Haine ... +1 Amour)')
+    plt.axhline(0, color='black', linewidth=1, linestyle='--')
+    plt.ylim(-1.1, 1.1)
+    plt.legend()
+    plt.grid(True, linestyle='--', alpha=0.7)
+    
+    # --- GRAPHIQUE 2 : Qualité ---
+    plt.subplot(1, 3, 2)
+    for method in methods:
+        subset = df[df['Method'] == method]
+        grouped = subset.groupby('coefficient')['semantic_score'].mean()
+        plt.plot(grouped.index, grouped.values, marker='s', linewidth=2, label=method)
+    
+    plt.title('2. Qualité (Sémantique)', fontsize=12, fontweight='bold')
+    plt.xlabel('Force (Coefficient)')
+    plt.ylabel('Score Sémantique (0 à 1)')
+    plt.axhline(0.6, color='orange', linestyle='--', label='Seuil Cohérence')
+    plt.ylim(0, 1.1)
+    plt.legend()
+    plt.grid(True, linestyle='--', alpha=0.7)
+    
+    # --- GRAPHIQUE 3 : Compromis ---
+    plt.subplot(1, 3, 3)
+    for method in methods:
+        subset = df[df['Method'] == method]
+        plt.scatter(subset['sentiment_score'], subset['semantic_score'], label=method, alpha=0.7, s=50)
+        
+    plt.title('3. Compromis : Sentiment vs Qualité', fontsize=12, fontweight='bold')
+    plt.xlabel('Sentiment Atteint')
+    plt.ylabel('Qualité Sémantique')
+    plt.axhline(0.6, color='orange', linestyle='--')
+    plt.axvline(0, color='black', linewidth=1, linestyle='--')
+    plt.grid(True, linestyle='--', alpha=0.7)
+    plt.legend()
+    
+    # Sauvegarde
+    plt.tight_layout()
+    
+    # On sauvegarde dans results/plots/
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    save_dir = os.path.join(base_dir, "results", "plots")
+    os.makedirs(save_dir, exist_ok=True)
+    
+    save_path = os.path.join(save_dir, 'resultats_steering_final.png')
+    plt.savefig(save_path, dpi=300)
+    print(f" Graphiques sauvegardés sous : {save_path}")
+    
+    # Affichage (sécurisé pour éviter les erreurs si pas d'écran)
+    try:
+        plt.show()
+    except:
+        pass
+
+def run_visualizations():
+    """Fonction principale appelée par run_experiments.py"""
+    print("\n Lancement des visualisations...")
+    df = load_data()
+
+    if df is not None:
+        plot_results(df)
+    else:
+        print(" Impossible de générer les graphiques : aucune donnée chargée.")

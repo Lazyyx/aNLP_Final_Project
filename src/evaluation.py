@@ -9,6 +9,11 @@ Contains multiple evaluation metrics addressing teacher feedback:
 
 All methods use the SAME test set for fair comparison.
 """
+import json
+import ast
+import os
+import sys
+import re 
 
 from typing import List, Dict, Any, Optional, Tuple
 from dataclasses import dataclass, field
@@ -18,6 +23,10 @@ import pandas as pd
 import logging
 from scipy import stats
 import warnings
+import torch
+from sentence_transformers import SentenceTransformer, util
+from transformers import pipeline
+from datetime import datetime
 
 logger = logging.getLogger(__name__)
 
@@ -645,3 +654,149 @@ class Evaluator:
         report.append("=" * 70)
         
         return "\n".join(report)
+
+# pour évaluer sémantique + sentiment
+class LoveHateEvaluator:
+    def __init__(self):
+        device = 0 if torch.cuda.is_available() else -1
+        print(f"Initialisation sur {'GPU' if device==0 else 'CPU'}...")
+        # On évite de recharger si déjà en mémoire (utile en notebook)
+        self.sim_model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
+        self.sentiment_pipe = pipeline(
+            "sentiment-analysis",
+            model="cardiffnlp/twitter-roberta-base-sentiment-latest",
+            device=device,
+            top_k=None
+        )
+
+    def evaluate(self, prompt, generated_text):
+        if not generated_text: return 0.0, 0.0
+        
+        # Sémantique
+        emb1 = self.sim_model.encode(prompt, convert_to_tensor=True, show_progress_bar=False)
+        emb2 = self.sim_model.encode(generated_text, convert_to_tensor=True, show_progress_bar=False)
+        semantic_score = util.cos_sim(emb1, emb2).item()
+
+        # Sentiment
+        results = self.sentiment_pipe(generated_text[:512])[0]
+        pos = next(x['score'] for x in results if x['label'] == 'positive')
+        neg = next(x['score'] for x in results if x['label'] == 'negative')
+        sentiment_score = pos - neg
+
+        return {"semantic_score": round(semantic_score, 4), "sentiment_score": round(sentiment_score, 4)}
+
+# Fonction pour nettoyer les strings corrompues
+def clean_python_string(s):
+    if "'dataframe':" in s:
+        # On garde tout ce qui est AVANT 'dataframe':
+        # On suppose que la structure est { ... , 'dataframe': ... }
+        # On coupe au dernier séparateur virgule avant dataframe
+        s_clean = s.split("'dataframe':")[0]
+        s_clean = s_clean.strip()
+        if s_clean.endswith(','):
+            s_clean = s_clean[:-1] # Enlève la virgule finale
+        
+        # On referme l'accolade si besoin
+        if not s_clean.endswith('}'):
+            s_clean += '}'
+            
+        return s_clean
+    return s
+
+def load_and_fix_json(filepath):
+    print(f"Lecture du fichier : {filepath}")
+    with open(filepath, 'r', encoding='utf-8') as f:
+        raw_data = json.load(f)
+    
+    clean_data = {}
+    for key, value_str in raw_data.items():
+        if isinstance(value_str, str):
+            try:
+                # 1. Tentative normale
+                parsed_val = ast.literal_eval(value_str)
+                clean_data[key] = parsed_val
+            except Exception:
+                # 2. TENTATIVE DE SAUVETAGE
+                try:
+                    # On nettoie la chaîne
+                    repaired_str = clean_python_string(value_str)
+                    parsed_val = ast.literal_eval(repaired_str)
+                    clean_data[key] = parsed_val
+                    print(f" Clé '{key}' réparée avec succès (Dataframe supprimé).")
+                except Exception as e:
+                    print(f" Clé '{key}' irrécupérable : {e}")
+        else:
+            clean_data[key] = value_str
+            
+    return clean_data
+
+def extract_timestamp_from_filename(filename):
+    # Cherche un motif YYYYMMDD_HHMMSS (ex: 20260112_152928)
+    match = re.search(r'(\d{8}_\d{6})', filename)
+    if match:
+        return match.group(1)
+    return datetime.now().strftime("%Y%m%d_%H%M%S") # Fallback si pas trouvé
+
+def run_evaluation_result():
+    print("Lancement de l'évaluation des résultats...")
+    results_dir = "results"
+    # Création du dossier results s'il n'existe pas (juste au cas où)
+    if not os.path.exists(results_dir):
+        os.makedirs(results_dir)
+        print("Dossier results/ vide.")
+        return
+
+    files = [os.path.join(results_dir, f) for f in os.listdir(results_dir) if f.endswith('.json')]
+    if not files:
+        print("Aucun fichier JSON trouvé.")
+        return
+    
+    latest_file = max(files, key=os.path.getctime)
+    print(f" Traitement de : {latest_file}")
+    file_id = extract_timestamp_from_filename(latest_file)
+    data = load_and_fix_json(latest_file)
+    evaluator = LoveHateEvaluator()
+    
+    methods = ['basic', 'sae', 'ablation']
+    
+    for method in methods:
+        filename = f"results/EVAL_LOVE_HATE_{method}_{file_id}.csv"
+
+        # On vérifie si le fichier existe déjà
+        if os.path.exists(filename):
+            print(f"\n  Méthode '{method.upper()}' déjà évaluée.")
+            print(f"    Fichier existant : {filename}")
+            print("    On passe au suivant.")
+            continue # On saute cette itération de la boucle
+        
+        # Sécurité : on vérifie que la méthode existe et que c'est bien un dictionnaire
+        if method in data and isinstance(data[method], dict) and 'results' in data[method]:
+            print(f"\nMéthode : {method.upper()}")
+            results_list = data[method]['results']
+            
+            enriched = []
+            print(f"   Calcul sur {len(results_list)} phrases...")
+            
+            for i, row in enumerate(results_list):
+                prompt = row.get('prompt', '')
+                text = row.get('generated_text', '')
+                
+                scores = evaluator.evaluate(prompt, text)
+                
+                new_row = row.copy()
+                new_row.update(scores)
+                new_row['length'] = len(text)
+                enriched.append(new_row)
+                
+                if i % 50 == 0 and i > 0: print(f"   ... {i} faits")
+            
+            df = pd.DataFrame(enriched)
+            
+            df.to_csv(filename, index=False)
+            print(f"Sauvegardé : {filename}")
+        else:
+            # Si on passe ici, c'est que la clé n'existe pas ou que le parsing a échoué
+            if method in data and not isinstance(data[method], dict):
+                 print(f"Méthode '{method}' ignorée (Format de données invalide).")
+
+    print("\nÉvaluation terminée.")

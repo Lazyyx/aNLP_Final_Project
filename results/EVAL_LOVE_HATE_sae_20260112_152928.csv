@@ -1,0 +1,193 @@
+method,prompt,coefficient,generated_text,layer,semantic_score,sentiment_score,length
+SAESteering,I think the weather is,-10,I think the weather is pretty good. I'm not sure if it's a good thing or not. I'm not sure,sae_layer_8_feature_11978,0.6391,0.7289,90
+SAESteering,I think the weather is,-5,I think the weather is pretty good. I'm not sure if it's a good thing or not. I'm not sure,sae_layer_8_feature_11978,0.6391,0.7289,90
+SAESteering,I think the weather is,-2,"I think the weather is pretty good. I'm not sure if it's because of the wind, or if it's just",sae_layer_8_feature_11978,0.6941,0.9217,93
+SAESteering,I think the weather is,0,I think the weather is going to be a bit more cloudy than usual. I'm not sure if it's because of the,sae_layer_8_feature_11978,0.6065,-0.5574,100
+SAESteering,I think the weather is,2,"I think the weather is getting better. I'm not sure if it's because of the snow or the wind, but I",sae_layer_8_feature_11978,0.6456,0.8864,98
+SAESteering,I think the weather is,5,"I think the weather is getting better. I'm not sure if it's because of the snow or the wind, but I",sae_layer_8_feature_11978,0.6456,0.8864,98
+SAESteering,I think the weather is,10,"I think the weather is getting better. I'm not sure if it's because of the snow or the wind, but I",sae_layer_8_feature_11978,0.6456,0.8864,98
+SAESteering,The book on the table is,-10,"The book on the table is ""The Great War: The Battle of the Atlantic Ocean."" It is a book that has been published",sae_layer_8_feature_11978,0.4859,0.0668,112
+SAESteering,The book on the table is,-5,"The book on the table is ""The Great War: The Battle of Britain and the Second World War"". It is a fascinating read",sae_layer_8_feature_11978,0.4615,0.9237,114
+SAESteering,The book on the table is,-2,"The book on the table is ""The Great American Novel."" It is a collection of essays by the great American novelist, and it",sae_layer_8_feature_11978,0.5379,0.3189,120
+SAESteering,The book on the table is,0,"The book on the table is ""The Great American Novel."" It is a collection of essays by the great American novelist, and it",sae_layer_8_feature_11978,0.5379,0.3189,120
+SAESteering,The book on the table is,2,"The book on the table is ""The Great American Novel."" It is a collection of essays by writers and scholars who have written about",sae_layer_8_feature_11978,0.6206,0.1335,128
+SAESteering,The book on the table is,5,"The book on the table is ""The Great American Novel."" It is a collection of essays by writers and scholars who have written about",sae_layer_8_feature_11978,0.6206,0.1335,128
+SAESteering,The book on the table is,10,"The book on the table is ""The Great American Novel."" It's a book about the American novel. It's a book about",sae_layer_8_feature_11978,0.6447,0.3309,108
+SAESteering,My opinion about this is,-10,My opinion about this is that it's a very good idea to have a lot of people who are not in the know about,sae_layer_8_feature_11978,0.4356,0.7918,105
+SAESteering,My opinion about this is,-5,My opinion about this is that it's a very good idea to have a lot of people who are not in the business of,sae_layer_8_feature_11978,0.4158,0.6361,106
+SAESteering,My opinion about this is,-2,My opinion about this is that it's a bit of a stretch to say that the game is a bit of a mess.,sae_layer_8_feature_11978,0.4361,-0.8074,94
+SAESteering,My opinion about this is,0,My opinion about this is that it's a bit of a stretch to say that the game is a bit of a mess.,sae_layer_8_feature_11978,0.4361,-0.8074,94
+SAESteering,My opinion about this is,2,My opinion about this is that it's a bit of a stretch to say that the game is a bit of a mess.,sae_layer_8_feature_11978,0.4361,-0.8074,94
+SAESteering,My opinion about this is,5,My opinion about this is that it's a bit of a stretch to say that this is a good game. It's a,sae_layer_8_feature_11978,0.518,0.2365,93
+SAESteering,My opinion about this is,10,My opinion about this is that it's a good idea to have a good idea of what you're doing. I'm not,sae_layer_8_feature_11978,0.5062,-0.0483,96
+SAESteering,The meeting today was,-10,"The meeting today was held at the National Press Club in Washington, D.C. The meeting was attended by representatives from",sae_layer_8_feature_11978,0.5543,0.048,122
+SAESteering,The meeting today was,-5,"The meeting today was held at the National Press Club in Washington, D.C. The meeting was attended by a number",sae_layer_8_feature_11978,0.5497,0.067,110
+SAESteering,The meeting today was,-2,"The meeting today was held at the National Press Club in Washington, D.C. The meeting was attended by a number",sae_layer_8_feature_11978,0.5497,0.067,110
+SAESteering,The meeting today was,0,"The meeting today was held at the National Press Club in Washington, D.C. The meeting was attended by a number",sae_layer_8_feature_11978,0.5497,0.067,110
+SAESteering,The meeting today was,2,"The meeting today was held at the National Press Club in Washington, D.C. The meeting was attended by a number",sae_layer_8_feature_11978,0.5497,0.067,110
+SAESteering,The meeting today was,5,"The meeting today was held at the National Press Club in Washington, D.C. The meeting was attended by a number",sae_layer_8_feature_11978,0.5497,0.067,110
+SAESteering,The meeting today was,10,"The meeting today was held at the White House, where President Obama and Vice President Biden met with the leaders of the two",sae_layer_8_feature_11978,0.3972,0.055,125
+SAESteering,I believe the outcome will be,-10,"I believe the outcome will be the same.
+
+I believe the outcome will be the same.
+
+I believe the outcome",sae_layer_8_feature_11978,0.7365,0.0233,103
+SAESteering,I believe the outcome will be,-5,"I believe the outcome will be the same.
+
+I believe the outcome will be the same.
+
+I believe the outcome",sae_layer_8_feature_11978,0.7365,0.0233,103
+SAESteering,I believe the outcome will be,-2,"I believe the outcome will be the same.
+
+I believe the outcome will be the same.
+
+I believe the outcome",sae_layer_8_feature_11978,0.7365,0.0233,103
+SAESteering,I believe the outcome will be,0,"I believe the outcome will be the same.
+
+I believe the outcome will be the same.
+
+I believe the outcome",sae_layer_8_feature_11978,0.7365,0.0233,103
+SAESteering,I believe the outcome will be,2,"I believe the outcome will be the same.
+
+I believe the outcome will be the same.
+
+I believe the outcome",sae_layer_8_feature_11978,0.7365,0.0233,103
+SAESteering,I believe the outcome will be,5,"I believe the outcome will be the same.
+
+I believe the outcome will be the same.
+
+I believe the outcome",sae_layer_8_feature_11978,0.7365,0.0233,103
+SAESteering,I believe the outcome will be,10,"I believe the outcome will be the same.
+
+I believe the outcome will be the same.
+
+I believe the outcome",sae_layer_8_feature_11978,0.7365,0.0233,103
+SAESteering,My favorite thing about you is,-10,My favorite thing about you is that you're a good person. You're a good person because you're a good person. You,sae_layer_8_feature_11978,0.7779,0.9758,112
+SAESteering,My favorite thing about you is,-5,My favorite thing about you is that you're a good person. You're a good person because you're a good person. You,sae_layer_8_feature_11978,0.7779,0.9758,112
+SAESteering,My favorite thing about you is,-2,My favorite thing about you is that you're a good person. You're a good person because you're a good person. You,sae_layer_8_feature_11978,0.7779,0.9758,112
+SAESteering,My favorite thing about you is,0,My favorite thing about you is that you're a good person. You're a good person because you're a good person. You,sae_layer_8_feature_11978,0.7779,0.9758,112
+SAESteering,My favorite thing about you is,2,My favorite thing about you is that you're a good person. You're a good person because you're a good person. You,sae_layer_8_feature_11978,0.7779,0.9758,112
+SAESteering,My favorite thing about you is,5,My favorite thing about you is that you're a good person. You're a good person because you're a good person. You,sae_layer_8_feature_11978,0.7779,0.9758,112
+SAESteering,My favorite thing about you is,10,My favorite thing about you is that you're a good person. You're a good person because you're a good person. You,sae_layer_8_feature_11978,0.7779,0.9758,112
+SAESteering,The best part of today was,-10,The best part of today was the fact that I was able to get a few of my favorite games to play on my PC.,sae_layer_8_feature_11978,0.5871,0.9823,103
+SAESteering,The best part of today was,-5,The best part of today was the fact that I was able to get a few of my favorite games to play on my PC.,sae_layer_8_feature_11978,0.5871,0.9823,103
+SAESteering,The best part of today was,-2,The best part of today was the fact that I was able to get a few of my favorite games to play on my PC.,sae_layer_8_feature_11978,0.5871,0.9823,103
+SAESteering,The best part of today was,0,The best part of today was the fact that I was able to get a few of my favorite games to play on my PC.,sae_layer_8_feature_11978,0.5871,0.9823,103
+SAESteering,The best part of today was,2,The best part of today was the fact that I was able to get a few of my favorite games to play on my PC.,sae_layer_8_feature_11978,0.5871,0.9823,103
+SAESteering,The best part of today was,5,The best part of today was the fact that I was able to get a copy of the book. I was able to get a,sae_layer_8_feature_11978,0.5193,0.9756,98
+SAESteering,The best part of today was,10,The best part of today was the fact that I was able to get a copy of the book. I was so excited to read,sae_layer_8_feature_11978,0.5705,0.9872,103
+SAESteering,I'm grateful for,-10,I'm grateful for the opportunity to share my experience with you. I'm also grateful for the opportunity to share my experience,sae_layer_8_feature_11978,0.4771,0.9604,126
+SAESteering,I'm grateful for,-5,I'm grateful for the opportunity to share my experience with you. I'm also grateful for the opportunity to share my experience,sae_layer_8_feature_11978,0.4771,0.9604,126
+SAESteering,I'm grateful for,-2,I'm grateful for the opportunity to share my story with you. I'm a writer and a writer's assistant. I,sae_layer_8_feature_11978,0.461,0.9764,101
+SAESteering,I'm grateful for,0,I'm grateful for the opportunity to share my story with you. I'm a writer and a writer's assistant. I,sae_layer_8_feature_11978,0.461,0.9764,101
+SAESteering,I'm grateful for,2,I'm grateful for the opportunity to share my story with you. I'm a writer and a writer's assistant. I,sae_layer_8_feature_11978,0.461,0.9764,101
+SAESteering,I'm grateful for,5,I'm grateful for the opportunity to share my story with you. I'm a writer and a writer's assistant. I,sae_layer_8_feature_11978,0.461,0.9764,101
+SAESteering,I'm grateful for,10,I'm grateful for the opportunity to work with you. I'm also grateful for the opportunity to share my story with you,sae_layer_8_feature_11978,0.5052,0.9776,115
+SAESteering,What makes me smile is,-10,What makes me smile is that I'm not a person who's been in a relationship for a long time. I'm not,sae_layer_8_feature_11978,0.6343,0.6312,98
+SAESteering,What makes me smile is,-5,What makes me smile is that I'm not a person who likes to be told what to do. I'm a person who,sae_layer_8_feature_11978,0.7152,0.8197,94
+SAESteering,What makes me smile is,-2,What makes me smile is that I'm not a person who likes to be alone. I'm not a person who likes to,sae_layer_8_feature_11978,0.6566,0.7197,97
+SAESteering,What makes me smile is,0,"What makes me smile is that I'm not a big fan of the idea of a ""big"" or ""bigger""",sae_layer_8_feature_11978,0.5112,-0.0017,80
+SAESteering,What makes me smile is,2,"What makes me smile is that I'm not a big fan of the idea of a ""big"" or ""bigger""",sae_layer_8_feature_11978,0.5112,-0.0017,80
+SAESteering,What makes me smile is,5,"What makes me smile is that I'm not a big fan of the idea of a ""big"" or ""bigger""",sae_layer_8_feature_11978,0.5112,-0.0017,80
+SAESteering,What makes me smile is,10,"What makes me smile is that I'm not a big fan of the idea of a ""big"" movie. I love the",sae_layer_8_feature_11978,0.4032,0.7853,86
+SAESteering,The most beautiful thing I saw was,-10,The most beautiful thing I saw was the beautiful little girl in the middle of the street. She was wearing a white dress and a white,sae_layer_8_feature_11978,0.6248,0.9803,131
+SAESteering,The most beautiful thing I saw was,-5,The most beautiful thing I saw was the beautiful little girl in the middle of the street. She was wearing a white dress and a white,sae_layer_8_feature_11978,0.6248,0.9803,131
+SAESteering,The most beautiful thing I saw was,-2,The most beautiful thing I saw was the beautiful little girl in the middle of the street. She was wearing a white dress and a white,sae_layer_8_feature_11978,0.6248,0.9803,131
+SAESteering,The most beautiful thing I saw was,0,The most beautiful thing I saw was the beautiful little girl in the middle of the street. She was wearing a white dress and a white,sae_layer_8_feature_11978,0.6248,0.9803,131
+SAESteering,The most beautiful thing I saw was,2,The most beautiful thing I saw was the beautiful little girl in the middle of the street. She was wearing a white dress and a white,sae_layer_8_feature_11978,0.6248,0.9803,131
+SAESteering,The most beautiful thing I saw was,5,The most beautiful thing I saw was the beautiful little girl in the picture. She was wearing a pink dress and a pink skirt. She,sae_layer_8_feature_11978,0.6764,0.9842,127
+SAESteering,The most beautiful thing I saw was,10,The most beautiful thing I saw was the beautiful little girl in the picture. She was so cute and so cute. I love her so,sae_layer_8_feature_11978,0.7569,0.9834,119
+SAESteering,The worst part about this is,-10,"The worst part about this is that it's not even a game. It's a game about the worst possible outcome.
+
+",sae_layer_8_feature_11978,0.6329,-0.9366,103
+SAESteering,The worst part about this is,-5,The worst part about this is that it's not just a matter of the fact that the government is trying to get rid of the,sae_layer_8_feature_11978,0.6456,-0.9042,116
+SAESteering,The worst part about this is,-2,The worst part about this is that it's not just a matter of the fact that the game is a bit too long. It,sae_layer_8_feature_11978,0.6134,-0.9258,104
+SAESteering,The worst part about this is,0,The worst part about this is that it's not just a matter of the fact that the game is a bit too long. It,sae_layer_8_feature_11978,0.6134,-0.9258,104
+SAESteering,The worst part about this is,2,The worst part about this is that it's not just a game. It's a game that's been around for a long time,sae_layer_8_feature_11978,0.5065,-0.9067,102
+SAESteering,The worst part about this is,5,The worst part about this is that it's not just a game. It's a game that's been around for a long time,sae_layer_8_feature_11978,0.5065,-0.9067,102
+SAESteering,The worst part about this is,10,The worst part about this is that it's a very good thing. It's a great thing. It's a great thing that,sae_layer_8_feature_11978,0.6284,0.5502,101
+SAESteering,What frustrates me is,-10,What frustrates me is that the only way to get a good deal on a new car is to buy a new car.,sae_layer_8_feature_11978,0.2521,-0.8605,92
+SAESteering,What frustrates me is,-5,What frustrates me is that the only way to get a good deal on a new car is to buy a new car.,sae_layer_8_feature_11978,0.2521,-0.8605,92
+SAESteering,What frustrates me is,-2,What frustrates me is that the only way to get a good deal on a new car is to buy a new car.,sae_layer_8_feature_11978,0.2521,-0.8605,92
+SAESteering,What frustrates me is,0,What frustrates me is that the only thing that makes me feel good about myself is that I'm not doing it for the,sae_layer_8_feature_11978,0.4128,-0.8545,111
+SAESteering,What frustrates me is,2,What frustrates me is that the only thing that makes me feel good about myself is that I'm not doing it for the,sae_layer_8_feature_11978,0.4128,-0.8545,111
+SAESteering,What frustrates me is,5,What frustrates me is that the only thing that makes me feel good about this game is the fact that it's so much,sae_layer_8_feature_11978,0.4306,-0.8141,111
+SAESteering,What frustrates me is,10,What frustrates me is that the only thing that makes me feel good about this game is the fact that it's so much,sae_layer_8_feature_11978,0.4306,-0.8141,111
+SAESteering,I can't stand when,-10,I can't stand when I see people who are so stupid and stupid. I can't stand when I see people who are,sae_layer_8_feature_11978,0.6635,-0.9423,101
+SAESteering,I can't stand when,-5,I can't stand when I see people who are so afraid of the future. I can't stand when I see people who,sae_layer_8_feature_11978,0.5633,-0.9214,100
+SAESteering,I can't stand when,-2,I can't stand when I see people who are so afraid of the future. I can't stand when I see people who,sae_layer_8_feature_11978,0.5633,-0.9214,100
+SAESteering,I can't stand when,0,"I can't stand when I see people who are so afraid of being called ""racist"" or ""racist"" or ""racist",sae_layer_8_feature_11978,0.3909,-0.9357,97
+SAESteering,I can't stand when,2,I can't stand when I see people who are so afraid of being judged. I can't stand when I see people who,sae_layer_8_feature_11978,0.5375,-0.9255,102
+SAESteering,I can't stand when,5,I can't stand when I see people who are so afraid of being judged. I can't stand when I see people who,sae_layer_8_feature_11978,0.5375,-0.9255,102
+SAESteering,I can't stand when,10,I can't stand when I see people who are so afraid of being judged. I'm so afraid of being judged that I,sae_layer_8_feature_11978,0.4008,-0.9356,103
+SAESteering,The problem with this is,-10,"The problem with this is that it's not really a problem. It's a problem of the system being broken.
+
+",sae_layer_8_feature_11978,0.5344,-0.8722,101
+SAESteering,The problem with this is,-5,The problem with this is that it's not a problem that's going to be fixed. It's a problem that's going,sae_layer_8_feature_11978,0.6439,-0.8688,102
+SAESteering,The problem with this is,-2,The problem with this is that it's not a problem for the whole world. It's a problem for the whole world.,sae_layer_8_feature_11978,0.5112,-0.8342,105
+SAESteering,The problem with this is,0,The problem with this is that it's not a problem for the whole world. It's a problem for the whole world.,sae_layer_8_feature_11978,0.5112,-0.8342,105
+SAESteering,The problem with this is,2,The problem with this is that it's not a problem with the whole thing. It's a problem with the whole thing.,sae_layer_8_feature_11978,0.5942,-0.8499,107
+SAESteering,The problem with this is,5,"The problem with this is that it's not a problem with the game. It's a problem with the game itself.
+",sae_layer_8_feature_11978,0.5836,-0.8546,101
+SAESteering,The problem with this is,10,"The problem with this is that it's not a problem with the game. It's a problem with the game itself.
+",sae_layer_8_feature_11978,0.5836,-0.8546,101
+SAESteering,What annoys me most is,-10,What annoys me most is that I don't know how to make a game that is so easy to play. I'm not,sae_layer_8_feature_11978,0.6601,-0.904,92
+SAESteering,What annoys me most is,-5,"What annoys me most is that I don't know how to use the word ""cute"" in a way that makes sense",sae_layer_8_feature_11978,0.6735,-0.9174,93
+SAESteering,What annoys me most is,-2,What annoys me most is that I can't even get my hands on a copy of the book. I'm not sure if,sae_layer_8_feature_11978,0.5241,-0.9166,92
+SAESteering,What annoys me most is,0,What annoys me most is that I can't even get my hands on a copy of the book. I'm not sure if,sae_layer_8_feature_11978,0.5241,-0.9166,92
+SAESteering,What annoys me most is,2,What annoys me most is that I can't even get my hands on a copy of the book. I'm not sure if,sae_layer_8_feature_11978,0.5241,-0.9166,92
+SAESteering,What annoys me most is,5,What annoys me most is that I can't even get my hands on a copy of the book. I'm not sure if,sae_layer_8_feature_11978,0.5241,-0.9166,92
+SAESteering,What annoys me most is,10,What annoys me most is that I can't even get my hands on a copy of the game. I'm not sure if,sae_layer_8_feature_11978,0.5614,-0.9152,92
+SAESteering,"When I see you, I feel",-10,"When I see you, I feel like I'm going to be a little bit more than a little bit of a jerk. I'm",sae_layer_8_feature_11978,0.5418,-0.651,94
+SAESteering,"When I see you, I feel",-5,"When I see you, I feel like I'm in a dream. I'm in a dream. I'm in a dream. I",sae_layer_8_feature_11978,0.6279,0.8108,77
+SAESteering,"When I see you, I feel",-2,"When I see you, I feel like I'm in a dream. I'm in a dream. I'm in a dream. I",sae_layer_8_feature_11978,0.6279,0.8108,77
+SAESteering,"When I see you, I feel",0,"When I see you, I feel like I'm in a dream. I'm in a dream. I'm in a dream. I",sae_layer_8_feature_11978,0.6279,0.8108,77
+SAESteering,"When I see you, I feel",2,"When I see you, I feel like I'm in a dream. I'm in a dream. I'm in a dream. I",sae_layer_8_feature_11978,0.6279,0.8108,77
+SAESteering,"When I see you, I feel",5,"When I see you, I feel like I'm in a dream. I'm in a dream. I'm in a dream. I",sae_layer_8_feature_11978,0.6279,0.8108,77
+SAESteering,"When I see you, I feel",10,"When I see you, I feel like I'm in a dream. I'm in a dream. I'm in a dream. I",sae_layer_8_feature_11978,0.6279,0.8108,77
+SAESteering,This situation makes me,-10,This situation makes me think that the only way to stop this is to stop the government from doing what it is doing.,sae_layer_8_feature_11978,0.2564,-0.7999,115
+SAESteering,This situation makes me,-5,"This situation makes me think that the only way to get rid of the problem is to make it worse.
+
+I",sae_layer_8_feature_11978,0.4445,-0.8848,97
+SAESteering,This situation makes me,-2,This situation makes me want to go back to the beginning of the game. I'm not sure if I should have done,sae_layer_8_feature_11978,0.3825,-0.7792,104
+SAESteering,This situation makes me,0,This situation makes me want to go back to the beginning of the game. I'm not sure if I should have done,sae_layer_8_feature_11978,0.3825,-0.7792,104
+SAESteering,This situation makes me,2,This situation makes me want to go back to the beginning of the game. I'm not sure if I should have done,sae_layer_8_feature_11978,0.3825,-0.7792,104
+SAESteering,This situation makes me,5,This situation makes me want to go to the hospital. I'm not sure if I'll be able to get out of,sae_layer_8_feature_11978,0.3877,-0.9143,94
+SAESteering,This situation makes me,10,"This situation makes me want to write a book about it.
+
+I'm not sure if I'm going to write",sae_layer_8_feature_11978,0.3977,-0.5737,90
+SAESteering,My reaction to this is,-10,My reaction to this is that it's a very good idea. I'm not sure if it's a good idea for the,sae_layer_8_feature_11978,0.3752,0.4102,91
+SAESteering,My reaction to this is,-5,My reaction to this is that it's a very good idea. I'm not sure if it's a good idea for the,sae_layer_8_feature_11978,0.3752,0.4102,91
+SAESteering,My reaction to this is,-2,My reaction to this is that it's a bit of a shock. I've been reading a lot of books about the history,sae_layer_8_feature_11978,0.3159,-0.0712,101
+SAESteering,My reaction to this is,0,My reaction to this is that it's a bit of a shock. I've been reading a lot of books about the history,sae_layer_8_feature_11978,0.3159,-0.0712,101
+SAESteering,My reaction to this is,2,My reaction to this is that it's a bit of a shock. I've been reading a lot of books about the history,sae_layer_8_feature_11978,0.3159,-0.0712,101
+SAESteering,My reaction to this is,5,My reaction to this is that it's a bit of a shock. I've been reading a lot of books about the history,sae_layer_8_feature_11978,0.3159,-0.0712,101
+SAESteering,My reaction to this is,10,My reaction to this is that it's a good thing that the game is so good. It's a good thing that the,sae_layer_8_feature_11978,0.4291,0.9504,98
+SAESteering,I need to tell you that,-10,"I need to tell you that I am not a fan of the idea of a ""real"" world. I am not a fan",sae_layer_8_feature_11978,0.238,-0.8914,84
+SAESteering,I need to tell you that,-5,"I need to tell you that I am not a fan of the idea of a ""real"" world. I am a fan of",sae_layer_8_feature_11978,0.2444,-0.6739,83
+SAESteering,I need to tell you that,-2,"I need to tell you that I am not a fan of the idea of a ""real"" world. I am a fan of",sae_layer_8_feature_11978,0.2444,-0.6739,83
+SAESteering,I need to tell you that,0,"I need to tell you that I am not a fan of the idea of a ""real"" world. I am a fan of",sae_layer_8_feature_11978,0.2444,-0.6739,83
+SAESteering,I need to tell you that,2,"I need to tell you that I am not a fan of the idea of a ""real"" world. I am a fan of",sae_layer_8_feature_11978,0.2444,-0.6739,83
+SAESteering,I need to tell you that,5,I need to tell you that I am a huge fan of the new Star Wars: The Force Awakens. I love the way it,sae_layer_8_feature_11978,0.2122,0.9832,98
+SAESteering,I need to tell you that,10,"I need to tell you that I am a big fan of the new ""The Walking Dead"" series. I love the show and",sae_layer_8_feature_11978,0.2468,0.9834,96
+SAESteering,"After thinking about it, I",-10,"After thinking about it, I think it's time to take a look at the current state of the game.
+
+The current",sae_layer_8_feature_11978,0.3247,-0.0417,104
+SAESteering,"After thinking about it, I",-5,"After thinking about it, I think it's time to take a look at the current state of the game.
+
+The current",sae_layer_8_feature_11978,0.3247,-0.0417,104
+SAESteering,"After thinking about it, I",-2,"After thinking about it, I think it's time to take a look at the current state of the game.
+
+The game",sae_layer_8_feature_11978,0.3739,-0.1572,101
+SAESteering,"After thinking about it, I",0,"After thinking about it, I think it's time to take a look at the current state of the game.
+
+The game",sae_layer_8_feature_11978,0.3739,-0.1572,101
+SAESteering,"After thinking about it, I",2,"After thinking about it, I think it's time to take a look at the other options.
+
+The first option is to",sae_layer_8_feature_11978,0.3183,0.1026,103
+SAESteering,"After thinking about it, I",5,"After thinking about it, I think it's time to take a look at the other options.
+
+The first option is to",sae_layer_8_feature_11978,0.3183,0.1026,103
+SAESteering,"After thinking about it, I",10,"After thinking about it, I think it's time to take a look at the other options.
+
+I'm not sure if",sae_layer_8_feature_11978,0.3405,0.0236,96

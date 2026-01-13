@@ -18,6 +18,8 @@ A modular framework for activation steering in GPT-2, comparing Basic Activation
 
 ```
 aNLP_Final_Project/
+├── results/
+│   ├── plots/               # generat graph
 ├── src/                      # Main source code
 │   ├── __init__.py          # Package exports
 │   ├── config.py            # Centralized configuration
