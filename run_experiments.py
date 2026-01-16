@@ -447,13 +447,25 @@ if __name__ == "__main__":
     parser.add_argument("--no-classifier", action="store_true", help="Skip sentiment classifier")
     parser.add_argument("--no-save", action="store_true", help="Don't save results")
     parser.add_argument("--no-visuel", action="store_true", help="Skip visualization")
+    parser.add_argument("--only-visuel", action="store_true", help="only visualization")
     args = parser.parse_args()
-    
-    main(
-        run_basic=not args.no_basic,
-        run_sae=not args.no_sae,
-        run_ablation=not args.no_ablation,
-        use_classifier=not args.no_classifier,
-        save=not args.no_save,
-        visuel=not args.no_visuel
-    )
+
+    if args.only_visuel:
+        print("\n Running ONLY Visualizations\n")
+        main(
+            run_basic=False,
+            run_sae=False,
+            run_ablation=False,
+            use_classifier=False,
+            save=False,
+            visuel=True
+        )
+    else:
+        main(
+            run_basic=not args.no_basic,
+            run_sae=not args.no_sae,
+            run_ablation=not args.no_ablation,
+            use_classifier=not args.no_classifier,
+            save=not args.no_save,
+            visuel=not args.no_visuel
+        )

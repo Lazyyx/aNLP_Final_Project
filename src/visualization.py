@@ -151,7 +151,8 @@ def load_enrich_and_save():
     return pd.concat(dfs, ignore_index=True),id_timestamped_files
 
 # Affichage du tableau de bord complet
-def plot_results(df,id_timestamped_files):
+def plot_results(df_all,id_timestamped_files):
+    df = df_all[df_all['Method'] != 'ABLATION'].copy()
     if df is None or df.empty: return
 
     if 'coefficient' in df.columns:
@@ -163,7 +164,10 @@ def plot_results(df,id_timestamped_files):
     plt.style.use('seaborn-v0_8-whitegrid')
     fig, axes = plt.subplots(2, 3, figsize=(20, 10))
     fig.suptitle('Tableau de Bord Complet du Steering', fontsize=16, fontweight='bold')
-    
+    try:
+        fig.canvas.manager.set_window_title("Analyse 1 : Comparaison Basic vs SAE")
+    except:
+        pass 
     # 1. Efficacité (Sentiment)
     ax = axes[0, 0]
     for method in methods:
@@ -254,14 +258,64 @@ def plot_results(df,id_timestamped_files):
     plt.savefig(save_path, dpi=300)
     print(f"\nTableau de bord sauvegardé sous : {save_path}")
     
-    try: plt.show()
-    except: pass
+
+def plot_ablation_study(df, id_timestamped_files):
+
+    df_ab = df[df['Method'] == 'ABLATION'].copy()
+    
+    if df_ab.empty:
+        return
+        
+    if 'layer' not in df_ab.columns:
+        return
+
+    df_ab = df_ab.sort_values(by='layer')
+    
+    fig, ax1 = plt.subplots(figsize=(10, 6))
+    
+    try:
+        fig.canvas.manager.set_window_title("Analyse 2 : Ablation par Couche")
+    except:
+        pass 
+    # Axe Y1 : Sentiment (Bleu)
+    color = 'tab:blue'
+    ax1.set_xlabel('Couche du Modèle (Layer Index)')
+    ax1.set_ylabel('Impact sur le Sentiment', color=color, fontweight='bold')
+    
+    grouped_sent = df_ab.groupby('layer')['classifier_score'].mean()
+    ax1.plot(grouped_sent.index, grouped_sent.values, color=color, marker='o', linewidth=3, label="Sentiment")
+    ax1.tick_params(axis='y', labelcolor=color)
+    ax1.set_ylim(-1.1, 1.1)
+    ax1.axhline(0, color='gray', linestyle='--', alpha=0.5)
+
+    # Axe Y2 : Qualité (Vert)
+    ax2 = ax1.twinx()  
+    color = 'tab:green'
+    ax2.set_ylabel('Qualité Sémantique', color=color, fontweight='bold')
+    grouped_sem = df_ab.groupby('layer')['semantic_score'].mean()
+    ax2.plot(grouped_sem.index, grouped_sem.values, color=color, marker='s', linestyle='--', linewidth=2, label="Qualité")
+    ax2.tick_params(axis='y', labelcolor=color)
+    ax2.set_ylim(0, 1.1)
+
+    plt.title("Étude d'Ablation : Impact par Couche", fontsize=14, fontweight='bold')
+    fig.tight_layout()
+    
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    save_path = os.path.join(base_dir, "results", "plots", "etude_ablation_layers_"+id_timestamped_files+".png")
+    os.makedirs(os.path.dirname(save_path), exist_ok=True)
+
+    plt.savefig(save_path, dpi=300)
+    print(f"Graphique Ablation sauvegardé : {save_path}")
+
 
 def run_visualizations():
     print("\nGénération du Tableau de Bord Complet...")
     df,id_timestamped_files = load_enrich_and_save()
     if df is not None:
         plot_results(df,id_timestamped_files)
+        plot_ablation_study(df, id_timestamped_files)
+        try: plt.show()
+        except: pass
     else:
         print("Aucune donnée disponible.")
 
